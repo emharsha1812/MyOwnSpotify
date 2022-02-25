@@ -1,9 +1,13 @@
 import { getProviders, signIn } from "next-auth/react";
+import Image from "next/image";
+import loginLogo from "../public/logo.png";
 
 function Login({ providers }) {
   return (
     <div className="flex flex-col items-center bg-black min-h-screen w-full justify-center">
-      <img className="w-52 mb-5" src="https://links.papareact.com/9xl" alt="" />
+      {/* <img className="w-52 mb-5" src="https://links.papareact.com/9xl" alt="" /> */}
+      <Image src={loginLogo} height={60} width={60} />
+
       {Object.values(providers).map((provider) => (
         <div key={provider.name}>
           <button
